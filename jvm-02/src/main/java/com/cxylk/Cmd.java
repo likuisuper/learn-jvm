@@ -1,4 +1,4 @@
-package cxylk;
+package com.cxylk;
 
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
@@ -22,6 +22,9 @@ public class Cmd {
 
     @Parameter(names = { "-cp", "-classpath" }, description = "classpath", order = 1)
     String classpath;
+
+    @Parameter(names = "-Xjre",description = "path to jar",order = 4)
+    String jre;
 
     @Parameter(description = "main class and args")
     List<String> mainClassAndArgs;

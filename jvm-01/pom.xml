@@ -27,7 +27,7 @@
                                 <transformer
                                         implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <!--指定main方法-->
-                                    <mainClass>com.cxylk.Main</mainClass>
+                                    <mainClass>com.Main</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
