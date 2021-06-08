@@ -13,6 +13,7 @@
         <module>jvm-01</module>
         <module>jvm-02</module>
         <module>jvm-03</module>
+        <module>java-agent</module>
     </modules>
 
 
