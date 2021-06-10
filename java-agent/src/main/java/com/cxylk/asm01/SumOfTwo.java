@@ -48,6 +48,7 @@ public class SumOfTwo extends ClassLoader{
 
         }
         //第二个是sum方法
+        //public int sum(int a,int b){return a+b}
         {
             //首先需要定义对象头
             cw.visit(Opcodes.V1_8,Opcodes.ACC_PUBLIC,"com/cxylk/asm01/AsmSumOfTwoNumbers",null,"java/lang/Object",null);
