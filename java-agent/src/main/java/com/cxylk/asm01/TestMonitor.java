@@ -74,7 +74,7 @@ public class TestMonitor extends ClassLoader{
             mv.visitMethodInsn(INVOKESTATIC,"java/lang/System","nanoTime","()J",false);
             //将nanoTime方法返回的变量存入第3个本地变量 -->long timer=System.nanoTime();
             mv.visitVarInsn(LSTORE,2);
-            //将参数uid推送至栈顶
+            //将参数uid推送至栈顶（打印方法入参）
             mv.visitVarInsn(ALOAD,1);
         }
 
@@ -87,7 +87,7 @@ public class TestMonitor extends ClassLoader{
                 //创建StringBuilder对象
                 mv.visitTypeInsn(NEW,"java/lang/StringBuilder");
                 //复制栈顶数值并压入栈顶
-                //这是因为要监控的方法不是静态方法，所以还需要为局部变量表中的位于索引0处slot中的this赋值
+                //StringBuilder=new StringBuilder()后，要给局部变量表的this赋值
                 mv.visitInsn(DUP);
                 //调用构造函数完成初始化
                 mv.visitMethodInsn(INVOKESPECIAL,"java/lang/StringBuilder","<init>","()V",false);
